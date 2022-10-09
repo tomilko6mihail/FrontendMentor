@@ -1,0 +1,237 @@
+@font-face {
+    font-family: poppinsExtraLight;
+    src: url(./fonts/Poppins-ExtraLight.ttf);
+}
+@font-face {
+    font-family: poppinsLight;
+    src: url(./fonts/Poppins-Light.ttf);
+}
+@font-face {
+    font-family: poppinsBold;
+    src: url(./fonts/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: poppinsMedium;
+    src: url(./fonts/Poppins-Medium.ttf);
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: end;
+    font-family: poppinsLight;
+    font-size: 7pt;
+  }
+
+.poppinsLight{
+    font-family: poppinsExtraLight;
+}
+.poppinsBold{
+    font-family: poppinsBold;
+}
+.poppinsMedium{
+    font-family: poppinsMedium;
+}
+p{
+    margin: 0;
+}
+@media only screen and (max-width: 10080px) {
+.item1{
+    font-size: 28pt;
+    margin-bottom: 2px;
+    color: hsl(234, 12%, 34%);
+}
+.item2{
+    margin-bottom: 1%;
+    font-size: 28pt;
+    color: hsl(234, 12%, 34%);
+}
+.item3{
+    font-size: 12pt;
+    color: hsl(229, 6%, 66%);
+    margin-bottom: 3%;
+}
+header{
+    text-align: center;
+    height: 25%;
+    width: 550px;
+    margin: 5% auto;
+} 
+.blocks{
+    align-items: center;
+}
+body{
+    margin: 0 10% 0 10%;
+    width: 80%;
+    height: auto;
+    text-align: center;
+}
+.block{
+    width: 310px;
+    height: 230px;
+    display: inline-block;
+    padding: 2%;
+    border-radius: 7px;
+    margin: 25px;
+    padding-top: 2%;
+    box-shadow: 0em 1em 20px 0px rgba(0, 35, 71, 0.11);
+    position: relative;
+    transition-duration: 250ms;
+}
+.one{
+    border-top: 5px solid hsl(180, 62%, 55%);
+}
+.two{
+    border-top: 5px solid hsl(0, 78%, 62%);
+}
+.three{
+    border-top: 5px solid hsl(34, 97%, 64%);
+}
+.four{
+    border-top: 5px solid hsl(212, 86%, 64%);
+}
+.name{
+    font-size: 19pt;
+    margin-bottom: 3%;
+    font-family: poppinsBold;
+    color: hsl(234, 12%, 34%);
+    text-align: left;
+}
+.about{
+    font-family: poppinsLight;
+    font-size: 11pt;
+    margin-right: 10%;
+    color: hsl(229, 6%, 66%);
+    text-align: left;
+}
+
+.block img{
+    position: absolute; 
+    right: 10%; 
+    bottom: 10%;
+    height: 70px;
+    width: 70px;
+}
+
+.block:hover{
+    box-shadow: 0em 1em 20px 0px rgba(0, 20, 39, 0.37);
+    animation: infinite alternate ease-in-out;
+    animation-name: activeBlock;
+    animation-direction: 250ms;
+    top: -10px;
+}
+
+@keyframes activeBlock{
+    0%{
+        box-shadow: 0em 1em 20px 0px rgba(0, 35, 71, 0.11);
+    }
+     100%{
+        box-shadow: 0em 1em 20px 0px rgba(0, 20, 39, 0.37);
+     }
+}
+}
+
+@media only screen and (max-width: 660px){
+    .item1{
+        font-size: 19pt;
+        margin-bottom: 2px;
+        color: hsl(234, 12%, 34%);
+    }
+    .item2{
+        margin-bottom: 10%;
+        font-size: 19pt;
+        color: hsl(234, 12%, 34%);
+    }
+    .item3{
+        font-size: 11pt;
+        color: hsl(229, 6%, 66%);
+        margin-bottom: 7%;
+    }
+    header{
+        margin-top: 20%;
+        text-align: center;
+        height: 25%;
+        width: 100%;
+    } 
+    .blocks{
+        align-items: center;
+    }
+    body{
+        margin: 0 10% 0 10%;
+        width: 80%;
+        height: auto;
+        text-align: center;
+    }
+    .block{
+        width: 80%;
+        height: 200px;
+        display: inline-block;
+        padding: 10%;
+        border-radius: 7px;
+        padding-top: 6%;
+        box-shadow: 0em 1em 20px 0px rgb(0 35 71 / 11%);
+        position: relative;
+        transition-duration: 250ms;
+        margin: 25px auto;
+    }
+    .one{
+        border-top: 5px solid hsl(180, 62%, 55%);
+    }
+    .two{
+        border-top: 5px solid hsl(0, 78%, 62%);
+    }
+    .three{
+        border-top: 5px solid hsl(34, 97%, 64%);
+    }
+    .four{
+        border-top: 5px solid hsl(212, 86%, 64%);
+    }
+    .name{
+        font-size: 19pt;
+        margin-bottom: 3%;
+        font-family: poppinsBold;
+        color: hsl(234, 12%, 34%);
+        text-align: left;
+    }
+    .about{
+        font-family: poppinsLight;
+        font-size: 11pt;
+        margin-right: 10%;
+        color: hsl(229, 6%, 66%);
+        text-align: left;
+    }
+    
+    .block img{
+        position: absolute; 
+        right: 10%; 
+        bottom: 10%;
+        height: 70px;
+        width: 70px;
+    }
+    
+    .block:hover{
+        box-shadow: 0em 1em 20px 0px rgba(0, 20, 39, 0.37);
+        animation: infinite alternate ease-in-out;
+        animation-name: activeBlock;
+        animation-direction: 250ms;
+        top: -10px;
+    }
+    
+    @keyframes activeBlock{
+        0%{
+            box-shadow: 0em 1em 20px 0px rgba(0, 35, 71, 0.11);
+        }
+         100%{
+            box-shadow: 0em 1em 20px 0px rgba(0, 20, 39, 0.37);
+         }
+    }
+}
