@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+
+  <div class="left-block">
+
+    <div class="text_box">
+      <p class="bold maintext">Learn to code by watching others</p>
+
+      <p class="medium main-text2">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+      but understanding how developers think is invaluable. </p>
+    </div>
+
+  </div>
+
+  <div class="right-block">
+    <div class="content">
+      <button class="subscribe-button"> <p class="text-button" > <span class="bold">Try it free 7 days</span> then $20/mo. thereafter </p> </button>
+
+      <div class="card">
+
+        <form name="theForm">
+          <input class="form-input" type="text" maxlength="15" minlength="3" placeholder="First Name" id="First_Name" onblur="normal_firstname()" onfocus="reset_firstname()"></input>
+          <div class="error_text" id="fn"> </div>
+          <input class="form-input" type="text" maxlength="15" minlength="3" placeholder="Last Name" id="Last_Name" onblur="normal_lastname()" onfocus="reset_lastname()"></input>
+          <div class="error_text" id="ln"> </div>
+          <input class="form-input" type="email" maxlength="30" minlength="3" placeholder="Email Address" id="Email_Address" onblur="normal_email()" onfocus="reset_email()"></input>
+          <div class="error_text" id="ea"> </div>
+          <input class="form-input" type="password" maxlength="16" minlength="6" placeholder="Password" id="Password" onblur="normal_pass()" onfocus="reset_pass()"></input>
+          <div class="error_text" id="pas"> </div>
+
+          <input type="button" class="register" value="CLAIM YOUR FREE TRAIL" onclick="func_res()">
+
+        </form>
+        <p class="Light bottom-text">By clicking the button, you are agreeing to our <a href="#" class="bold" style="color: hsl(9, 100%, 74%); text-decoration: none;">Terms and Services</a></p>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
