@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles-faq.css">
+  
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <script language="JavaScript">
+    function flipflop( id, arrow, ask )
+    {
+     element = document.getElementById( id );
+     element2 = document.getElementById( arrow );
+     element3 = document.getElementById( ask )
+     if( element )   
+        element.style.display = element.style.display == "none" ? "" : "none";   
+     if( element2 )   
+        element2.style.transform = element2.style.transform == "rotate(0deg)" ? "rotate(180deg)" : "rotate(0deg)";
+     if( element3 )
+        element3.style.fontFamily = element3.style.fontFamily == "sansLight" ? "sansBold" : "sansLight";
+    }
+ </script>
+
+</head>
+<body>
+
+  <div class="card">
+    <div class="left-block-one"><div class="left-block-two"><img src="./images/illustration-box-desktop.svg" class="box"><img class="mobile" src="./images/illustration-woman-online-mobile.svg"></div></div>
+    <div class="right-block">
+      <p class="sabo faq">FAQ</p>
+      <div class="tables">
+        <ul>
+            <li class="element-table">
+              <a href="javascript:flipflop('invite', 'arrow', 'ask');"><p class="sali" id="ask" style="font-family: sansLight;">How many team members can I invite?<img id="arrow" style="transform: rotate(0deg); transition: transform 0.15s ease-in-out;" src="./images/icon-arrow-down.svg" class="arrow"></p></a>
+              <ul id="invite" style="display: none">
+                  <li class="inform">You can invite up to 2 additional users on the Free plan. There is no limit on 
+                    team members for the Premium plan.</li>                
+              </ul>
+              <hr style="padding: 0; height: 0; border: none; border-top: 0.5px solid hsl(0deg 0% 75%);">
+            </li>
+            <li class="element-table">
+              <a href="javascript:flipflop('max-file', 'arrow1', 'ask1');"><p id="ask1" style="font-family: sansLight;" class="sali">What is the maximum file upload size?<img id="arrow1" style="transform: rotate(0deg); transition: transform 0.15s ease-in-out;" src="./images/icon-arrow-down.svg" class="arrow"></p></a>
+              <ul id="max-file" style="display: none;">
+                  <li class="inform">No more than 2GB. All files in your account must fit your allotted storage space.</li>              
+              </ul>
+              <hr style="padding: 0; height: 0; border: none; border-top: 0.5px solid hsl(0deg 0% 75%);">
+            </li>
+            <li class="element-table">
+              <a href="javascript:flipflop('password', 'arrow2', 'ask2');"><p id="ask2" style="font-family: sansLight;" class="sali">How do I reset my password?<img id="arrow2" style="transform: rotate(0deg); transition: transform 0.15s ease-in-out;" src="./images/icon-arrow-down.svg" class="arrow"></p></a>
+              <ul id="password" style="display: none;">
+                <li class="inform">Click “Forgot password” from the login page or “Change password” from your profile page.
+                  A reset link will be emailed to you.</li>              
+              </ul>
+              <hr style="padding: 0; height: 0; border: none; border-top: 0.5px solid hsl(0deg 0% 75%);">
+            </li>
+            <li class="element-table">
+              <a href="javascript:flipflop('subscribe', 'arrow3', 'ask3');"><p id="ask3" style="font-family: sansLight;" class="sali">Can I cancel my subscription?<img id="arrow3" style="transform: rotate(0deg); transition: transform 0.15s ease-in-out;" src="./images/icon-arrow-down.svg" class="arrow"></p></a>
+              <ul id="subscribe" style="display: none;">
+                <li class="inform">Yes! Send us a message and we’ll process your request no questions asked.</li>              
+              </ul>
+              <hr style="padding: 0; height: 0; border: none; border-top: 0.5px solid hsl(0deg 0% 75%);">
+            </li>
+            <li class="element-table">
+              <a href="javascript:flipflop('support', 'arrow4', 'ask4');"><p id="ask4" style="font-family: sansLight;" class="sali">Do you provide additional support?<img id="arrow4" style="transform: rotate(0deg); transition: transform 0.15s ease-in-out;" src="./images/icon-arrow-down.svg" class="arrow"></p></a>
+              <ul id="support" style="display: none;">
+                <li class="inform">Chat and email support is available 24/7. Phone lines are open during normal business hours.</li>
+              </ul>
+              <hr style="padding: 0; height: 0; border: none; border-top: 0.5px solid hsl(0deg 0% 75%);">
+            </li>       
+       </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
