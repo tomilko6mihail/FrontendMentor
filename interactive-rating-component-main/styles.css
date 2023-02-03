@@ -1,0 +1,312 @@
+@font-face {
+    font-family: overpassBold;
+    src: url(./fonts/Overpass-Bold.ttf);
+}
+@font-face {
+    font-family: overpassMedium;
+    src: url(./fonts/Overpass-Medium.ttf);
+}
+@font-face {
+    font-family: overpassLight;
+    src: url(./fonts/Overpass-Light.ttf);
+}
+body{
+    background-color: hsl(216, 12%, 8%);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+@media only screen and (max-width: 10660px){
+    .card{
+        width: 450px;
+        height: 450px;
+        background: radial-gradient(circle farthest-corner at 50% -100px, hsl(213, 19%, 18%), #171E28);
+        border-radius: 35px;
+        box-shadow: 0px 6px 20px 0px #00000040;
+        display: grid;
+        box-sizing: border-box;
+        padding: 35px;
+        margin: auto;
+    }
+    .raiting-page{
+        display: grid;
+        grid: 15% 20% 20% 25% auto/ 100%;
+    }
+    .headText{
+        font-family: 'overpassMedium';
+        color: white;
+        margin: 0 0 5% 0;
+        align-self: end;
+        font-size: 21pt;
+    }
+    .about{
+        font-family: overpassMedium;
+        margin: 0;
+        line-height: 25px;
+        word-spacing: 1px;
+        font-size: 13pt;
+        color: hsl(216, 12%, 54%);
+    }
+    .icon-star{
+        height: 30%;
+        position: relative;
+        top: -1px;
+        align-self: center;
+    }
+    .outer-star{
+        background-color: hsl(213, 19%, 18%);
+        height: 55px;
+        width: 55px;
+        display: flex;
+        align-self: center;
+        border-radius: 100px;
+        align-content: center;
+        justify-content: center;
+    }
+    .text-in-button{position: relative;top: 4%;}
+    .labeles{
+        font-family: overpassMedium;
+        position: relative;
+        left: -10%;
+    }
+    .radio-element{
+        height: 20px;
+        position: relative;
+        top: -20%;
+    }
+    .radio-element input[type=radio] {
+        display: none;
+    }
+    .radio-element label {
+        display: flex;
+        cursor: pointer;
+        height: 60px;
+        font-family: 'overpassMedium';
+        width: 60px;
+        background-color: hsl(213, 19%, 18%);
+        border-radius: 100px;
+        user-select: none;
+        justify-content: center;
+        align-items: center;
+        font-size: 14pt;
+        color: hsl(217, 12%, 63%);
+        transition: ease-in-out 0.1s background-color;
+    }
+    .radio-element input[type=radio]:checked + label {
+        background-color: hsl(217, 12%, 63%);
+        color: white;
+        transition: ease-in-out 0.1s background-color;
+    }
+    .radio-element input[type=radio]:hover + label {
+        background-color: hsl(25, 97%, 53%);
+        color: white;
+        transition: ease-in-out 0.1s background-color;
+    }
+    .radio{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .sumbitButton{
+        background-color: hsl(25, 97%, 53%);
+        box-shadow: 0px 2px 5px 0px #100d18;
+        text-decoration: none;
+        color: white;
+        height: 55%;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        display: flex;
+        align-self: end;
+        font-size: 14pt;
+        border-radius: 50px;
+        text-align: center;
+        font-family: overpassLight;
+        justify-content: center;
+        align-items: center;
+    }
+    .sumbitButton:hover{
+        background-color: white;
+        color: hsl(25, 97%, 53%);
+        transition: ease-in-out 0.1s background-color, ease-in-out 0.1s color;
+    }
+    .sumbitButton:active{
+        background-color: white;
+        color: hsl(25, 97%, 53%);
+        transition: ease-in-out 0.1s background-color, ease-in-out 0.1s color;
+    }
+    .centerText{
+        text-align: center;
+    }
+    .ty-img{
+        height: 30%;
+        margin: 10px;
+    }
+    .text-values{
+        background-color: hsl(213, 19%, 18%);
+        height: 35px;
+        width: 50%;
+        padding: 0 7px;
+        border-radius: 100px;
+        display: flex;
+        margin: 20px 0 40px;
+        justify-content: center;
+        align-items: center;
+    }
+    .text-values-js{
+        position: relative;
+        top: 2px;
+        color: hsl(25deg 76% 53%);
+        font-family: overpassMedium;
+    }
+    .nextpage{text-align: -webkit-center;}
+    .pt-12{
+        font-size: 12pt;
+    }
+}
+@media only screen and (max-width: 375px){
+    .card{
+        width: 340px;
+        height: 400px;
+        background: radial-gradient(circle farthest-corner at 50% -100px, hsl(213, 19%, 18%), #171E28);
+        border-radius: 20px;
+        box-shadow: 0px 6px 20px 0px #00000040;
+        display: grid;
+        box-sizing: border-box;
+        padding: 20px;
+        margin: auto;
+    }
+    .raiting-page{
+        display: grid;
+        grid: 15% 17% 20% 20% 25%/ 100%;
+    }
+    .headText{
+        font-family: 'overpassMedium';
+        color: white;
+        margin: 0 0 4% 0;
+        font-size: 19pt;
+    }
+    .about{
+        font-family: overpassMedium;
+        margin: 0;
+        line-height: 25px;
+        word-spacing: 1px;
+        font-size: 11pt;
+        color: hsl(216, 12%, 54%);
+    }
+    .icon-star{
+        height: 30%;
+        position: relative;
+        top: -1px;
+        align-self: center;
+    }
+    .outer-star{
+        background-color: hsl(213, 19%, 18%);
+        height: 45px;
+        width: 45px;
+        display: flex;
+        align-self: center;
+        border-radius: 100px;
+        justify-content: center;
+    }
+    .text-in-button{position: relative;top: 4%;}
+    .labeles{
+        font-family: overpassMedium;
+        position: relative;
+        left: -10%;
+    }
+    .radio-element{
+        height: 20px;
+        align-self: flex-end;
+    }
+    .radio-element input[type=radio] {
+        display: none;
+    }
+    .radio-element label {
+        display: flex;
+        cursor: pointer;
+        height: 45px;
+        font-family: 'overpassMedium';
+        width: 45px;
+        background-color: hsl(213, 19%, 18%);
+        border-radius: 100px;
+        user-select: none;
+        justify-content: center;
+        align-items: center;
+        font-size: 12pt;
+        color: hsl(217, 12%, 63%);
+        transition: ease-in-out 0.1s background-color;
+    }
+    .radio-element input[type=radio]:checked + label {
+        background-color: hsl(217, 12%, 63%);
+        color: white;
+        transition: ease-in-out 0.1s background-color;
+    }
+    .radio-element input[type=radio]:hover + label {
+        background-color: hsl(25, 97%, 53%);
+        color: white;
+        transition: ease-in-out 0.1s background-color;
+    }
+    .radio{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .sumbitButton{
+        background-color: hsl(25, 97%, 53%);
+        box-shadow: 0px 2px 5px 0px #100d18;
+        text-decoration: none;
+        color: white;
+        height: 55%;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        display: flex;
+        align-self: end;
+        font-size: 14pt;
+        border-radius: 50px;
+        text-align: center;
+        font-family: overpassLight;
+        justify-content: center;
+        align-items: center;
+    }
+    .sumbitButton:hover{
+        background-color: white;
+        color: hsl(25, 97%, 53%);
+        transition: ease-in-out 0.1s background-color, ease-in-out 0.1s color;
+    }
+    .sumbitButton:active{
+        background-color: white;
+        color: hsl(25, 97%, 53%);
+        transition: ease-in-out 0.1s background-color, ease-in-out 0.1s color;
+    }
+    .centerText{
+        text-align: center;
+    }
+    .ty-img{
+        height: 30%;
+        margin: 10px;
+    }
+    .text-values{
+        background-color: hsl(213, 19%, 18%);
+        height: 35px;
+        width: 65%;
+        padding: 0 7px;
+        border-radius: 100px;
+        display: flex;
+        margin: 20px 0 40px;
+        justify-content: center;
+        align-items: center;
+    }
+    .text-values-js{
+        position: relative;
+        top: 2px;
+        color: hsl(25deg 76% 53%);
+        font-family: overpassMedium;
+    }
+    .nextpage{text-align: -webkit-center;}
+    .pt-12{
+        font-size: 11pt;
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="./styles.css" type="text/css" rel="stylesheet">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <script>
+    function values() {
+      var rad=document.getElementsByName('radio-button');
+      var valueText=document.getElementById('value');
+      for (var i=0;i<rad.length; i++) {
+        if (rad[i].checked) {
+          valueText.innerText = i + 1;
+          document.getElementById("raitingPage").style.display = "none";
+          document.getElementById("nextPage").style.display = "";
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Rating state start -->
+ <div class="card">
+
+  <div id="raitingPage" class="raiting-page">
+    <div class="outer-star"><img src="./images/icon-star.svg" class="icon-star"></div>
+    <p class="headText">How did we do?</p>
+
+    <p class="about">Please let us know how we did with your support request. All feedback is appreciated 
+    to help us improve our offering!</p>
+
+    <div class="radio">
+      <form style="display: contents;">
+
+      <div class="radio-element"><input type="radio" id="radio-1" value="1" name="radio-button">
+        <label for="radio-1">1</label></div>
+
+        <div class="radio-element"><input type="radio" id="radio-2" value="2" name="radio-button">
+        <label for="radio-2">2</label></div>
+
+        <div class="radio-element"><input type="radio" id="radio-3" value="3" name="radio-button">
+        <label for="radio-3">3</label></div>
+
+        <div class="radio-element"><input type="radio" id="radio-4" value="4" name="radio-button">
+        <label for="radio-4">4</label></div>
+
+        <div class="radio-element"><input type="radio" id="radio-5" value="5" name="radio-button">
+        <label for="radio-5">5</label></div>
+      </form>
+
+    </div>
+
+    <a href="javascript:values();" class="sumbitButton"><p class="text-in-button">Submit</p></a>
+  </div>
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+
+  <div class="nextpage centerText" style="display: none;" id="nextPage">
+    <img src="./images/illustration-thank-you.svg" class="ty-img">
+    <div class="text-values">
+      <p class="text-values-js">You selected <span id="value"></span> out of 5</p>
+    </div>
+
+  <p class="headText centerText">Thank you!</p>
+
+  <p class="about centerText pt-12">We appreciate you taking the time to give a rating. If you ever need more support, 
+  don’t hesitate to get in touch!</p>
+  </div>
+
+  <!-- Thank you state end -->
+
+</div>
+
+</body>
+</html>
