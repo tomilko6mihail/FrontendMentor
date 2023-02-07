@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css" type="text/css">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <script src="./script.js"></script>
+
+</head>
+<body>
+  <img src="./images/logo.svg" alt="logo" class="logo">
+
+  <div>
+    <div class="card">
+      <div class="left">
+
+        
+        <label for="bill"><p class="labels" style="margin-top: 0;">Bill</p></label>
+        <div class="input-flexes">
+        <img src="./images/icon-dollar.svg" class="icon-input">
+        <input class="input-numbers" type="number" id="bill" oninput="resetIsTrue()" placeholder="0">
+        </div>
+        
+
+        <label for="tips"><p class="labels">Select Tip %</p></label>
+        <form id="tips" class="tips">
+
+        <div class="radio-element"> <input type="radio" name="radio" onclick="resetCustom()" value="0.05" id="tip-5">
+          <label for="tip-5">5%</label>
+        </div>
+          
+          <div class="radio-element"> <input type="radio" name="radio" onclick="resetCustom()" value="0.1" id="tip-10">
+          <label for="tip-10">10%</label>
+          </div>
+
+          <div class="radio-element"> <input type="radio" name="radio" onclick="resetCustom()" value="0.15" id="tip-15">
+          <label for="tip-15">15%</label>
+          </div>
+
+          <div class="radio-element"> <input type="radio" name="radio" onclick="resetCustom()" value="0.25" id="tip-25">
+          <label for="tip-25">25%</label>
+          </div>
+
+          <div class="radio-element"> <input type="radio" name="radio" onclick="resetCustom()" value="0.5" id="tip-50">
+          <label for="tip-50">50%</label>
+          </div>
+
+          <input type="number" class="input-castom" oninput="resetRadio()" id="custom" placeholder="Custom">
+          
+        </form>
+
+        
+        <label for="peoples" style="display: flex; justify-content: space-between;">
+          <p class="labels">Number of People</p>
+          <p class="labels" id="errorZero" style="color: hsla(0, 47%, 51%, 0); align-items: end; position: relative; top: -20px; transition: top 0.2s ease-in-out, color 0.1s ease-in-out;">Can't be zero</p>
+        </label>
+
+        <div class="input-flexes">
+        <img src="./images/icon-person.svg" class="icon-input">
+        <input class="input-numbers" type="number" id="peoples" oninput="resetIsTrue()" placeholder="0">
+        </div>
+        
+
+      </div>
+      <div class="right">
+
+      <div class="rows">
+        <div class="grid-right">
+          <p class="head-right-text">Tip Amount</p>
+          <p class="head-right-small-text">/ person</p>
+        </div>
+
+        <p id="tipAmountSum" class="sum">$0.00</p>
+      </div>
+        
+      <div class="rows">
+        <div class="grid-right">
+          <p class="head-right-text">Total</p>
+          <p class="head-right-small-text">/ person</p>
+        </div>
+        
+        <p id="totalSum" class="sum">$0.00</p>
+      </div>
+        
+
+      <a href="javascript:result()" id="resetButton" class="button">Reset</a>
+
+      </div>
+    </div>
+  </div>
+  <div class="scam"></div>
+</body>
+</html>

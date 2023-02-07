@@ -1,0 +1,487 @@
+@font-face {
+    font-family: spaceRegular;
+    src: url(./SpaceMono-Regular.ttf);
+}
+@font-face {
+    font-family: spaceBold;
+    src: url(./SpaceMono-Bold.ttf);
+}
+
+@media only screen and (max-width: 10660px){
+    body{
+        background-color: hsl(185, 41%, 84%);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+.logo{
+    height: 5%;
+    margin: 10% 0 4%;
+}
+.card{
+    background-color: white;
+    width: 850px;
+    height: 450px;
+    box-shadow: 0px 4px 20px hsl(183deg 100% 15% / 18%);
+    display: grid;
+    grid: 100% / 50% 50%;
+    box-sizing: border-box;
+    border-radius: 25px;
+    padding: 25px;
+}
+.left{
+    display: block;
+    padding-right: 7%;
+    display: flex;
+    padding: 15px 30px 15px 17px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.right{
+    display: grid;
+    grid: 25% / 100%;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 15px;
+    padding: 8%;
+    margin-left: 7%;
+    box-sizing: border-box;
+}
+.input-numbers{
+    background-color: hsl(189, 41%, 97%);
+    border: 0;
+    width: 100%;
+    border-radius: 6px;
+    height: 40px;
+    text-align: end;
+    padding-right: 20px;
+
+    font-family: spaceBold;
+    font-size: 15pt;
+    caret-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    transition: box-shadow 0.1s ease-in-out;
+}
+.input-numbers::placeholder{
+    text-align: right;
+    font-family: spaceBold;
+    font-size: 17pt;
+    color: hsl(186, 14%, 43%);
+}
+.input-numbers:focus{
+    outline: none;
+    box-shadow: inset 0 0 0 2px hsl(172, 67%, 45%);
+    transition: box-shadow 0.1s ease-in-out;
+}
+.input-numbers:focus-visible{
+    outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.labels{
+    color: hsl(186, 14%, 43%);
+    margin: 11% 0 2%;
+    font-family: 'spaceBold';
+}
+.tips{
+    height: 130px;
+    display: inline-flex;
+    margin-top: 2%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 100%;
+}
+.radio-element{
+    width: 31%;
+}
+.radio-element input[type=radio] {
+    display: none;
+}
+.radio-element label {
+    display: flex;
+    cursor: pointer;
+    height: 50px;
+    font-family: spaceBold;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 6px;
+    user-select: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 17pt;
+    color: white;
+    transition: ease-in-out 0.1s background-color;
+}
+.radio-element input[type=radio]:checked + label {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    transition: ease-in-out 0.1s background-color;
+}
+.radio-element input[type=radio]:hover + label {
+    background-color: hsl(172, 62%, 72%);
+    color: hsl(183, 100%, 15%);
+    transition: ease-in-out 0.1s background-color;
+}
+.input-castom{
+    display: block;
+    width: 31%;
+    height: 50px;
+    box-sizing: border-box;
+    border: 0;
+    text-align: end;
+    background-color: hsl(189, 41%, 97%);
+    border-radius: 6px;
+    font-family: spaceBold;
+    font-size: 18pt;
+    caret-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    padding-right: 15px;
+    transition: box-shadow 0.1s ease-in-out;
+}
+.input-castom::placeholder{
+    font-family: spaceBold;
+    color: hsl(186, 14%, 43%);
+    text-align: center;
+    position: relative;
+    right: -5px;
+    font-size: 16pt;
+}
+.input-castom:focus{
+    outline: none;
+    box-shadow: inset 0 0 0 2px hsl(172, 67%, 45%);
+    transition: box-shadow 0.1s ease-in-out;
+}
+.head-right-text{
+    font-family: spaceBold;
+    font-size: 11pt;
+    color: white;
+    margin: 11% 0;
+}
+.head-right-small-text{
+    font-family: spaceBold;
+    color: hsl(186, 14%, 43%);
+    font-size: 9pt;
+    margin: 0;
+}
+.sum{
+    font-family: spaceBold;
+    text-align: end;
+    position: relative;
+    top: -6%;
+    color: hsl(172, 67%, 45%);
+    margin: 0;
+    font-size: 33pt;
+}
+.grid-right{
+    display: grid;
+    grid: 50% 50% / 100%;
+}
+.rows{
+    display: grid;
+    margin-bottom: 9%;
+    grid: 60px / 30% 70%;
+    margin-top: 2%;
+}
+.button{
+    height: 45px;
+    display: flex;
+    text-transform: uppercase;
+    align-self: end;
+    font-family: 'spaceBold';
+    font-size: 14pt;
+    text-decoration: none;
+    width: 100%;
+    color: hsl(183, 100%, 15%);
+    border-radius: 8px;
+    background-color: hsl(172deg 67% 45% / 26%);
+    justify-content: center;
+    align-items: center;
+    transition: 0.1s ease-in-out background-color;
+    pointer-events: none;
+}
+.new-style-reset-button{
+    height: 45px;
+    display: flex;
+    text-transform: uppercase;
+    align-self: end;
+    font-family: 'spaceBold';
+    font-size: 14pt;
+    text-decoration: none;
+    width: 100%;
+    color: hsl(183, 100%, 15%);
+    border-radius: 8px;
+    background-color: hsl(172, 67%, 45%);
+    justify-content: center;
+    align-items: center;
+    transition: 0.1s ease-in-out background-color;
+    pointer-events: none;
+}
+.new-style-reset-button:hover{
+    background-color: hsl(172, 62%, 72%);
+}
+.icon-input{
+    position: absolute;
+    margin-left: 20px;
+}
+.input-flexes{
+    display: flex;
+    align-items: center;
+}
+p, img, a, input::selection {
+    -moz-user-select: -moz-none;
+-o-user-select: none;
+-khtml-user-select: none;
+-webkit-user-select: none;
+user-select: none;
+ }
+}
+
+@media only screen and (max-width: 750px){
+    body{
+        background-color: hsl(185, 41%, 84%);
+        width: 100%;
+        height: 100%;
+        position: relative;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo{
+        height: 5%;
+        margin: 10% 0 10%;
+    }
+    .card{
+        background-color: white;
+        width: 100%;
+        height: 800px;
+        display: grid;
+        grid: 65% 35% / 100%;
+        box-sizing: border-box;
+        border-radius: 25px 25px 0 0;
+        padding: 30px;
+    }
+    .left{
+        display: block;
+        padding-right: 7%;
+        display: flex;
+        padding: 0;
+        padding-bottom: 30px;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .right{
+        display: grid;
+        grid: 25% / 100%;
+        background-color: hsl(183, 100%, 15%);
+        border-radius: 13px;
+        padding: 8%;
+        margin-left: 0;
+        box-sizing: border-box;
+    }
+    .input-numbers{
+        background-color: hsl(189, 41%, 97%);
+        border: 0;
+        width: 100%;
+        border-radius: 6px;
+        height: 47px;
+        text-align: end;
+        padding-right: 20px;
+        font-family: spaceBold;
+        font-size: 15pt;
+        caret-color: hsl(172, 67%, 45%);
+        color: hsl(183, 100%, 15%);
+        transition: box-shadow 0.1s ease-in-out;
+    }
+    .input-numbers::placeholder{
+        text-align: right;
+        font-family: spaceBold;
+        font-size: 17pt;
+        color: hsl(186, 14%, 43%);
+    }
+    .input-numbers:focus{
+        outline: none;
+        box-shadow: inset 0 0 0 2px hsl(172, 67%, 45%);
+        transition: box-shadow 0.1s ease-in-out;
+    }
+    .input-numbers:focus-visible{
+        outline: none;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    
+    .labels{
+        color: hsl(186, 14%, 43%);
+        margin: 11% 0 2%;
+        font-family: 'spaceBold';
+    }
+    .tips{
+        height: 170px;
+        display: inline-flex;
+        margin-top: 2%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        width: 100%;
+    }
+    .radio-element{
+        width: 48%;
+    }
+    .radio-element input[type=radio] {
+        display: none;
+    }
+    .radio-element label {
+        display: flex;
+        cursor: pointer;
+        height: 50px;
+        font-family: spaceBold;
+        background-color: hsl(183, 100%, 15%);
+        border-radius: 6px;
+        user-select: none;
+        justify-content: center;
+        align-items: center;
+        font-size: 17pt;
+        color: white;
+        transition: ease-in-out 0.1s background-color;
+    }
+    .radio-element input[type=radio]:checked + label {
+        background-color: hsl(172, 67%, 45%);
+        color: hsl(183, 100%, 15%);
+        transition: ease-in-out 0.1s background-color;
+    }
+    .radio-element input[type=radio]:hover + label {
+        background-color: hsl(172, 62%, 72%);
+        color: hsl(183, 100%, 15%);
+        transition: ease-in-out 0.1s background-color;
+    }
+    .input-castom{
+        display: block;
+        width: 48%;
+        height: 50px;
+        box-sizing: border-box;
+        border: 0;
+        text-align: end;
+        background-color: hsl(189, 41%, 97%);
+        border-radius: 6px;
+        font-family: spaceBold;
+        font-size: 18pt;
+        caret-color: hsl(172, 67%, 45%);
+        color: hsl(183, 100%, 15%);
+        padding-right: 15px;
+        transition: box-shadow 0.1s ease-in-out;
+    }
+    .input-castom::placeholder{
+        font-family: spaceBold;
+        color: hsl(186, 14%, 43%);
+        text-align: end;
+        position: relative;
+        right: 5px;
+        font-size: 16pt;
+    }
+    .input-castom:focus{
+        outline: none;
+        box-shadow: inset 0 0 0 2px hsl(172, 67%, 45%);
+        transition: box-shadow 0.1s ease-in-out;
+    }
+    .head-right-text{
+        font-family: spaceBold;
+        font-size: 10pt;
+        color: white;
+        margin: 11% 0;
+    }
+    .head-right-small-text{
+        font-family: spaceBold;
+        color: hsl(186, 14%, 43%);
+        font-size: 9pt;
+        margin: 0;
+    }
+    .sum{
+        font-family: spaceBold;
+        text-align: end;
+        position: relative;
+        top: 0;
+        color: hsl(172, 67%, 45%);
+        margin: 0;
+        font-size: 28pt;
+    }
+    .grid-right{
+        display: grid;
+        grid: 50% 50% / 100%;
+    }
+    .rows{
+        display: grid;
+        margin-bottom: 9%;
+        grid: 60px / 40% 60%;
+        margin-top: 2%;
+    }
+    .button{
+        height: 45px;
+        display: flex;
+        text-transform: uppercase;
+        align-self: end;
+        font-family: 'spaceBold';
+        font-size: 14pt;
+        text-decoration: none;
+        width: 100%;
+        color: hsl(183, 100%, 15%);
+        border-radius: 5px;
+        background-color: hsl(172deg 67% 45% / 26%);
+        justify-content: center;
+        align-items: center;
+        transition: 0.1s ease-in-out background-color;
+        pointer-events: none;
+    }
+    .new-style-reset-button{
+        height: 45px;
+        display: flex;
+        text-transform: uppercase;
+        align-self: end;
+        font-family: 'spaceBold';
+        font-size: 14pt;
+        text-decoration: none;
+        width: 100%;
+        color: hsl(183, 100%, 15%);
+        border-radius: 8px;
+        background-color: hsl(172, 67%, 45%);
+        justify-content: center;
+        align-items: center;
+        transition: 0.1s ease-in-out background-color;
+        pointer-events: none;
+    }
+    .new-style-reset-button:hover{
+        background-color: hsl(172, 62%, 72%);
+    }
+    .icon-input{
+        position: absolute;
+        margin-left: 20px;
+    }
+    .input-flexes{
+        display: flex;
+        align-items: center;
+    }
+    p, img, a, input::selection {
+        -moz-user-select: -moz-none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+     }
+     .scam{
+        background-color: white;
+        width: 1000px;
+        position: fixed;
+        top: 650px;
+        z-index: -1;
+        height: 1000px;
+     }
+}
