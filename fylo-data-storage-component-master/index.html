@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- worked by tomilko mihail -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  
+  <title>Frontend Mentor | Fylo data storage component</title>
+  <script src="./script.js"></script>
+</head>
+<body>
+  <div class="background">
+
+  <div class="main">
+    <div class="left">
+      <img src="./images/logo.svg" style="    height: 40px;
+      align-self: end;">
+      <div class="inline-buttons" style="height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;">
+        <a><img src="./images/icon-document.svg"></a>
+        <a><img src="./images/icon-folder.svg"></a>
+        <a><img src="./images/icon-upload.svg"></a>
+      </div>
+    </div>
+    <div class="right">
+
+      <div class="top-text">
+      <p class="text">You’ve used <span class="bold" id="used">815 GB</span> of your storage</p>
+      <div class="message"><p class="text" style="color: hsl(229, 7%, 55%);
+        font-family: 'vananasBold';
+        top: 3px;
+        position: relative;"><span  id="left" style="font-family: vananasBold;
+    top: 6px;
+    position: relative;
+    color: hsl(229, 57%, 11%);
+    font-size: 30pt;">185</span> GB LEFT</p>
+    </div>
+      </div>
+      <div class="range-zone">
+        <input type="range" class="rangeInput" name="left" id="rangeLeft" min="0" max="1000" step="1" value="815" oninput="update()">
+          <div class="ranger">
+            <div class="sliderThumb" id="sliderThumb"></div>
+          </div>
+      </div>
+      <label for="rangeLeft" style="display: flex;
+      position: relative;
+      justify-content: space-between;">
+      <p class="text range"><span class="bold">0 GB</span></p>
+      <p class="text range"><span class="bold">1000 GB</span></p>
+    </label>
+    </div>
+  </div>
+  </div>
+  
+</body>
+</html>

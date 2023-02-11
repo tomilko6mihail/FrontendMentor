@@ -1,0 +1,307 @@
+@font-face {
+    font-family: vananas;
+    src: url('./fonts/Raleway-Light.ttf');
+}
+@font-face {
+    font-family: vananasBold;
+    src: url('./fonts/Raleway-Bold.ttf');
+}
+@font-face {
+    font-family: vananasMed;
+    src: url('./fonts/Raleway-Medium.ttf');
+}
+@media only screen and (max-width: 10660px){
+body{
+    background-color: hsl(229, 57%, 11%);
+    position: fixed;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+}
+.left{
+    background-color: hsl(228, 56%, 26%);
+    height: 200px;
+    border-radius: 10px 110px 10px 10px;
+    width: 350px;
+    justify-content: center;
+    display: grid;
+    grid: 40% 60% / 75%;
+    align-items: center;
+}
+.right{
+    background-color: hsl(228, 56%, 26%);
+    height: 150px;
+    width: 500px;
+    position: relative;
+    /* display: flex; */
+    box-sizing: border-box;
+    top: 25px;
+    padding: 35px;
+    display: grid;
+    grid: 33% 43% 23% / 100%;
+    border-radius: 10px;
+    margin-left: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+a{
+    background-color: hsl(229, 57%, 11%);
+    height: 50px;
+    display: flex;
+    border-radius: 11px;
+    margin-right: 15px;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.text{
+    font-family: vananas;
+    margin: 0;
+    color: white;
+    letter-spacing: 0.3px;
+    font-size: 10pt;
+}
+.range{
+    position: relative;
+}
+.bold{
+    font-family: vananasBold;
+}
+.ranger{
+    background-color: hsl(229, 57%, 11%);
+    height: 19px;
+    display: flex;
+    padding: 0 3px;
+    align-self: center;
+    align-items: center;
+    border-radius: 19px;
+    justify-content: flex-start;
+    align-content: center;
+}
+.sliderThumb{
+  width: 82.5%;
+  border-radius: 25px;
+  margin: 0;
+  height: 69%;
+  background: linear-gradient(to right,  hsl(6, 100%, 80%) 0%, hsl(335, 100%, 65%) 100%);
+}
+.rangeInput {
+    width: 415px;
+    pointer-events: all;
+    position: absolute;
+    left: 42px;
+    align-self: center;
+    /* background: linear-gradient(to right,  hsl(6, 100%, 80%) 0%, hsl(335, 100%, 65%) 0%, #fff 0%, #fff 100%); */
+    appearance: none;
+    background: none;
+    margin: 0;
+    height: 19px;
+    border-radius: 25px;
+  }
+.rangeInput::-webkit-slider-thumb{
+  cursor: pointer;
+  appearance: none;
+  width: 9px;
+  height: 9px;
+  background-color: white;
+  border-radius: 10px;
+}
+.rangeInput:focus-visible{
+    outline: 0;
+}
+.message{
+    background-color: white;
+    width: 170px;
+    height: 70px;
+    text-align: center;
+    display: flex;
+    border-radius: 7px;
+    top: -80px;
+    position: relative;
+    justify-content: center;
+    align-items: stretch;
+}
+.message::after{
+    content: '';
+    position: absolute;
+    top: 56%;
+    left: 110px;
+    width: 0;
+    height: 0;
+    border: 30px solid;
+    border-right-color: rgb(255 255 255);
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+.background{
+    background-image: url(./images/bg-desktop.png);
+    background-size: 100%;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    height: 100%;
+}
+.main{
+    width: 100%;
+    display: flex;
+    height: 100%;
+    position: relative;
+    top: 4px;
+    align-items: center;
+    justify-content: center;
+}
+.top-text{
+    display: flex; justify-content: space-between;
+}
+.range-zone{
+    height: 100%;
+    display: grid;
+}
+}
+
+@media only screen and (max-width: 400px){
+    .range-zone{
+        grid: 0px 100% / 100%;
+        height: 100%;
+        display: grid;
+    }
+    body{
+        background-color: hsl(229, 57%, 11%);
+        position: fixed;
+        height: 100%;
+        margin: 0;
+        width: 100%;
+    }
+    .left{
+        background-color: hsl(228, 56%, 26%);
+        height: 200px;
+        border-radius: 10px 110px 10px 10px;
+        width: 100%;
+        justify-content: center;
+        display: grid;
+        grid: 40% 60% / 75%;
+        align-items: center;
+    }
+    .right{
+        background-color: hsl(228, 56%, 26%);
+        height: 160px;
+        width: 100%;
+        position: relative;
+        display: flex;
+        box-sizing: border-box;
+        top: 25px;
+        padding: 35px 35px 50px 35px;
+        display: grid;
+        margin-left: 0;
+        grid: 33% 43% 23% / 100%;
+        border-radius: 10px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    a{
+        background-color: hsl(229, 57%, 11%);
+        height: 50px;
+        display: flex;
+        border-radius: 11px;
+        margin-right: 15px;
+        width: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+    .text{
+        font-family: 'vananas';
+        margin: 0;
+        color: white;
+        letter-spacing: 0.3px;
+        font-size: 10pt;
+    }
+    .range{
+        position: relative;
+    }
+    .bold{
+        font-family: 'vananasMed';
+    }
+    .ranger{
+        background-color: hsl(229, 57%, 11%);
+        height: 19px;
+        display: flex;
+        padding: 0 3px;
+        align-self: center;
+        align-items: center;
+        border-radius: 19px;
+        justify-content: flex-start;
+        align-content: center;
+    }
+    .sliderThumb{
+      width: 82.5%;
+      border-radius: 25px;
+      margin: 0;
+      height: 69%;
+      background: linear-gradient(to right,  hsl(6, 100%, 80%) 0%, hsl(335, 100%, 65%) 100%);
+    }
+    .rangeInput {
+        width: 95%;
+        pointer-events: all;
+        position: relative;
+        left: 6px;
+        top: 16px;
+        /* background: linear-gradient(to right,  hsl(6, 100%, 80%) 0%, hsl(335, 100%, 65%) 0%, #fff 0%, #fff 100%); */
+        appearance: none;
+        background: none;
+        margin: 0;
+        height: 100%;
+        border-radius: 25px;
+      }
+    .rangeInput::-webkit-slider-thumb{
+      cursor: pointer;
+      appearance: none;
+      width: 9px;
+      height: 9px;
+      background-color: white;
+      border-radius: 10px;
+    }
+    .rangeInput:focus-visible{
+        outline: 0;
+    }
+    .message{
+        background-color: white;
+        width: 170px;
+        height: 70px;
+        justify-self: center;
+        text-align: center;
+        display: flex;
+        border-radius: 7px;
+        top: 100%;
+        position: relative;
+        justify-content: center;
+        align-items: stretch;
+    }
+    .message::after{
+        border: 0;
+    }
+    .background{
+        background-image: url(./images/bg-mobile.png);
+        background-size: 100% 100%;
+        background-position-x: center;
+        background-repeat: no-repeat;
+        background-position-y: bottom;
+        height: 100%;
+    }
+    .main{
+        width: 100%;
+        display: flex;
+        height: 100%;
+        position: relative;
+        box-sizing: border-box;
+        padding: 0 7%;
+        top: 4px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .top-text{
+        display: grid;
+        justify-content: center;
+    }
+    }
