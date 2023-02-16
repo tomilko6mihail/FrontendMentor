@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <!-- by Mihail Tomilko -->
+  <script type="text/javascript">
+    function onLoad(){
+      const screenWidth = document.documentElement.scrollWidth;
+      if(screenWidth <= 400){
+        document.getElementById('discount').innerHTML = "-25%";
+        document.getElementById('head-text').innerHTML = "Sign-up for our 30-day trial. <br> No credit card required.";
+      }
+    }
+
+    function rangeScript(){
+      var rangeV = document.getElementById('priceRange').value;
+      //0 25 50 75 100
+      var precent = rangeV;
+      var priceValue = 16;
+      var pricer = document.getElementById('pricer');
+      var price = document.getElementById('price');
+      var vies = document.getElementById('vies');
+
+      if(rangeV == 1){
+        priceValue = 8;
+        vies.innerHTML = '10k';
+      }
+      if(rangeV == 2){
+        priceValue = 12;
+        vies.innerHTML = '50k';
+      }
+      if(rangeV == 3){
+        priceValue = 16;
+        vies.innerHTML = '100k';
+      }
+      if(rangeV == 4){
+        priceValue = 24;
+        vies.innerHTML = '500k';
+      }
+      if(rangeV == 5){
+        priceValue = 36;
+        vies.innerHTML = '1m';
+      }
+      if(!document.getElementById('checkbox').checked){
+        price.innerHTML = '$'+priceValue+'.00';
+        pricer.innerHTML = '$'+priceValue+'.00';
+      }
+      else{
+        price.innerHTML = '$'+(priceValue - (priceValue * 0.25))+'.00';
+        pricer.innerHTML = '$'+(priceValue - (priceValue * 0.25))+'.00';
+      }
+      document.getElementById('priceRange').style.background = 'linear-gradient(to right, hsl(174, 77%, 80%) 0%, hsl(174, 77%, 80%) ' + 25 * (precent-1) + '%, hsl(224, 65%, 95%) ' + 25 * (precent-1) + '%, hsl(224, 65%, 95%) 100%)';
+      
+    }
+  </script>
+</head>
+<body onload="onLoad()">
+
+  <div class="main">
+
+    <div class="top">
+      <p class="bold dark device-size" >Simple, traffic-based pricing</p>
+      <p id="head-text" style="line-height: 24px" class="medium grey med-size">Sign-up for our 30-day trial. No credit card required.</p>
+    </div>
+
+    <div class="card">
+
+      <div class="top-card">
+
+        <div class="param">
+              <p class="bold med-size grey" style="text-transform: uppercase;"> <span id="vies">100k</span> Pageviews</p>
+              <p class="bold med-size grey for-desctop"><b id="price" class="dark bold price-param">$16.00</b> <span class="month-param">/month</span></p>
+        </div>
+
+        <input type="range" oninput="rangeScript()" id="priceRange" class="range" step="1" max="5" min="1" value="3">
+
+        <div class="param for-mobile">
+          <p class="bold med-size grey"><b id="pricer" class="dark bold price-param">$16.00</b> <span class="month-param">/month</span></p>
+        </div>
+
+        <div class="end-row-top-card">
+          <p class="grey lit-size medium margin mobile-size">Monthly Billing</p>
+
+          <label class="switch margin">
+            <input oninput="rangeScript()" id="checkbox" type="checkbox">
+            <span class="slider"></span>
+          </label>
+
+          <p class="grey lit-size medium margin margin-wtf mobile-size">Yearly Billing</p> 
+          <p class="discount" class="margin" id="discount">25% discount</p>
+        </div>
+
+      </div>
+
+      <div class="bottom-card">
+
+        <div class="grey lit-size medium list">
+          <p class="mobile-margin"><img src="./images/icon-check.svg" class="margin" alt=" ">Unlimited websites</p>
+          <p class="mobile-margin"><img src="./images/icon-check.svg" class="margin" alt=" ">100% data ownership</p>
+          <p class="mobile-margin"><img src="./images/icon-check.svg" class="margin" alt=" ">Email reports</p>
+        </div>
+
+        
+          <a class="bold button lit-size">Start my trial</a>
+        
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
