@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.907f0b13.css",
+    "main.js": "/static/js/main.59b39e4c.js",
+    "static/media/HankenGrotesk-Medium.ttf": "/static/media/HankenGrotesk-Medium.234bf52fb6d6a56a561d.ttf",
+    "static/media/HankenGrotesk-ExtraBold.ttf": "/static/media/HankenGrotesk-ExtraBold.97e81bf3b3e87ffcef41.ttf",
+    "static/media/HankenGrotesk-Bold.ttf": "/static/media/HankenGrotesk-Bold.1161826a8f452bc76b77.ttf",
+    "static/media/icon-memory.svg": "/static/media/icon-memory.22a9e0501e58960f3c34.svg",
+    "index.html": "/index.html",
+    "static/media/icon-visual.svg": "/static/media/icon-visual.61fc2697d5094b6e3962.svg",
+    "static/media/icon-verbal.svg": "/static/media/icon-verbal.cc1204a0b0559da591a3.svg",
+    "static/media/icon-reaction.svg": "/static/media/icon-reaction.0c1d6b98b4559ba72276.svg",
+    "main.907f0b13.css.map": "/static/css/main.907f0b13.css.map",
+    "main.59b39e4c.js.map": "/static/js/main.59b39e4c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.907f0b13.css",
+    "static/js/main.59b39e4c.js"
+  ]
+}
